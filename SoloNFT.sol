@@ -1,8 +1,6 @@
 // "SPDX-License-Identifier: MIT"
-// TEX 22.09.2020
+// TEX 27.06.2021
 pragma solidity ^0.8.4;
-//pragma abicoder v2;
-//pragma abiencoder v2;
 
 library Address {
   function isContract(address account) internal view returns (bool) {
@@ -232,7 +230,7 @@ contract SoloNFT is Context, ERC165, IERC721, IERC721Metadata {
      * @dev See {IERC721-ownerOf}.
      */
     function ownerOf(uint256 tokenId) public view virtual override returns (address) {
-        require(tokenId == 0, "!token");
+        require(tokenId == 1, "!token");
         return owner;
     }
 
@@ -297,7 +295,7 @@ contract SoloNFT is Context, ERC165, IERC721, IERC721Metadata {
      * and stop existing when they are burned (`_burn`).
      */
     function _exists(uint256 tokenId) internal view virtual returns (bool) {
-        require(tokenId==0, "!id");
+        require(tokenId==1, "!id");
         return true; 
     }
 
