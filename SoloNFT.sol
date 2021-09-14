@@ -476,7 +476,7 @@ contract SoloNFT is Context, ERC165, IERC721, IERC721Metadata {
     /**
      * @dev creates a new reference with data for 'to' for metadata and data location
     */
-    function creteReferenceFor(address to, bytes32 metadataSwarmLocation, bytes32 tokenDataSwarmLocation) public {
+    function createReferenceFor(address to, bytes32 metadataSwarmLocation, bytes32 tokenDataSwarmLocation) public {
         require(msg.sender==owner, "!owner "); // not owner
         //require(_tokenDataLocation[to]==0, "Claimed "); // should it be immutable ? 
         
